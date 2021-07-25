@@ -201,6 +201,7 @@ display:block;
   width: 100%
   &:last-child {
     margin:0;
+    list-style: none;
   }
 
   .p{
@@ -280,6 +281,7 @@ margin: 0 0 0 0.5em,
 li,p {
 
   width: 100%
+  style:none
 }
   .input.btn{
 margin: 1.5em 0 0.5em;}
