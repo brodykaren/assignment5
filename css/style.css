@@ -125,7 +125,7 @@ padding: 0 2.5em ;}
 
   padding: 1.5em 2.5em;
   border-bottom: 1px solid $grey;
-  background-image:url("images/bora.phg");
+
   left-80px; color:$white;
 
   }
@@ -150,7 +150,7 @@ opacity: inherit;
 }
 
 h1 {
-  @include merienda&display;
+ font-family: Merienda: display;
   display: inline-block;
   font-weight: 100;
   font-size: pxtoem ( 45,16);
@@ -158,6 +158,7 @@ h1 {
   solid hsla (100%, 100%, 100%, 0.3);
   margin: 0 0 0.1em 0;
   padding: 0 0 0.4em 0;
+
 
 }
  h3 {
@@ -167,6 +168,7 @@ margin:1em 0 0.4em 0;
 
  }
 
+}
 
 .btn{
 
