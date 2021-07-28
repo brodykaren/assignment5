@@ -79,7 +79,8 @@ font-family:"merienda"; cursive; font-weight: 700;
 @mixin btn (.color) {
 
 background-color: $color;
-border-bottom-color:darken ($color, 15%); & :hover
+border-bottom-color:darken ($color, 15%);
+& :hover
 {
 background-color: lighten($color, 5%);
 
@@ -106,7 +107,7 @@ font-size: 100%
     @include box-sizing: (border-box);
   }
 
-  .container {
+  .container:target {
 
   max-width:510px;
   min-width: 324px;
@@ -156,7 +157,7 @@ h1 {
 
 }
  h3 {
-@include merienda&display:
+font: merienda & display
 pxtoem ( 20,16);
 margin:1em 0 0.4em 0;
 
@@ -200,8 +201,8 @@ display:block;
   display:inline-block;
   width: 100%
   &:last-child {
-    margin:0;
-    list-style: none;
+  margin:0;
+  list-style: none;
   }
 
   .p{
@@ -280,8 +281,8 @@ margin: 0 0 0 0.5em,
 
 li,p {
 
-  width: 100%
-  style:none
+  width: 100%;
+  list-style: none;
 }
   .input.btn{
 margin: 1.5em 0 0.5em;}
@@ -300,3 +301,20 @@ h3 {
     display:none
   }
   }
+
+  input + span {
+    position: relative;
+
+  }
+
+  input + span: : before {
+    position: absolute;
+    right:-20px;
+    top:5px;
+    border:2px, color: purple;
+  }
+
+input + span: : before {
+  content: "x";
+  color: orange;
+}
