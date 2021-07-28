@@ -125,10 +125,17 @@ padding: 0 2.5em ;}
 
   padding: 1.5em 2.5em;
   border-bottom: 1px solid $grey;
-  background-image:url("../images/bora.png");
+  background-image:url("images/bora.phg");
   left-80px; color:$white;
 
   }
+
+.row_header {
+background-image: url("images/kkeys.png");
+text-align: center;
+opacity: inherit;
+
+}
 
   & .body {
 
