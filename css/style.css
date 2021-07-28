@@ -20,7 +20,7 @@ margin-left: 40px;
 }
 
 
-.body {
+body {
 
   background-color: #d9d9d9
   margin-top:40px;
@@ -34,7 +34,7 @@ margin-left: 40px;
 
 }
 
-.body {
+body {
 
   background-color: #d9d9d9
 
@@ -48,12 +48,10 @@ margin-left: 40px;
 @import "compass/css3";
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
-font-family: 'Merienda', cursive;
+@import url(https://fonts.googleapis.com/css2?family=Merienda&display=swap;
+font-family: 'Merienda', cursive);
 </style>
 
-
-color vars {
 
 
 $white:#fff;
@@ -62,7 +60,7 @@ $dark_grey: #555;
 $blue:#4f6fad;
 $pink:#ee9cb4;
 
-}
+
 
 @mixin merienda&display {
 font-family:"merienda"; cursive; font-weight: 300;
@@ -76,7 +74,7 @@ font-family:"merienda"; cursive; font-weight: 400;
 font-family:"merienda"; cursive; font-weight: 700;
 }
 
-@mixin btn (.color) {
+@mixin btn ($color) {
 
 background-color: $color;
 border-bottom-color:darken ($color, 15%);
@@ -94,44 +92,45 @@ background-color: lighten($color, 5%);
 
   }
 
-  .body {
+body {
 
-background-color: lighten ($grey,10%);
-font-size: 100%
-@include merienda-cursive;
+background-color:#grey; 10%
+font-size:100 %
+font: merienda;
 
   }
 
   div,textarea,input {
-
-    @include box-sizing: (border-box);
+@include box-sizing: (border-box);
   }
 
-  .container:target {
+.container {
 
   max-width:510px;
   min-width: 324px;
-  margin: 50px auto opx;
-  background-color: $white;
+  margin: 50px auto 0px;
+  background-color: white;
   border:1px solid lighten ($grey, 1%);
   border-bottom:3px solid $grey;
 }
-  .row {
+.row {
 
 width: 100%;
 margin: 0 0 1em 0;
 padding: 0 2.5em ;}
-.header{
+
+
+& .header{
 
 
   padding: 1.5em 2.5em;
-  border-bottom: 1px solid $grey;}
-  .background-image: url ("images/bora.png")
+  border-bottom: 1px solid $grey;
+  background-image:url("../images/bora.png");
   left-80px; color:$white;
 
   }
 
-  .body {
+  & .body {
 
     padding: .5em 2.5em 1em;
   }
@@ -149,11 +148,9 @@ h1 {
   font-weight: 100;
   font-size: pxtoem ( 45,16);
   border-bottom: 1px;
-  solid hsla (
-    100%, 100%, 100%, 0.3);
-    margin: 0 0 0.1em 0;
-    padding: 0 0 0.4em 0;
-
+  solid hsla (100%, 100%, 100%, 0.3);
+  margin: 0 0 0.1em 0;
+  padding: 0 0 0.4em 0;
 
 }
  h3 {
@@ -175,42 +172,47 @@ border-width:  0 0 0 0;
 border-bottom: 5px solid;
 text-transform: uppercase;
 @include btn ( darken($grey, 10%));
-@include lato-book;
+@include merienda;
 .btn-submit {
-  @include btn ($blue);
+@include btn ($blue);
 }
 }
 
-.form {
+form {
 
 max-width: 100%
 display:block;
 
 }
 
-.ul{
+ul{
 
   margin:0;
   padding:0;
-  list-style: none;
+  list-style type: none;
+
 }
 
-.li {
+li {
   margin: 0 0 0.25em 0;
   clear:both;
   display:inline-block;
-  width: 100%
-  &:last-child {
+  width: 100%;
+  & :last-child {
   margin:0;
-  list-style: none;
+  list-style type: none;
+
   }
 
-  .p{
+
+
+
+p{
 
     margin:0;
     padding:0;
     float: left;
-    &.right {
+    & .right {
       float: right;
     }
   }
@@ -223,16 +225,16 @@ display:block;
   width:100%;
   display:block;
   background-color: $blue;
-  background image:linear-gradient ( to right,$pink,$blue);
+  background image:linear-gradient ( to right, pink,blue);
 }
 
 .req {
-  color:$pink;
+  color:pink;
+}
 }
 }
 
-
-.label {
+label {
 display:block;
 margin: 0 0 0.5em 0;
 border: 1px solid $grey;
@@ -243,13 +245,23 @@ pxtoem (16,16)
 
 }
 
+
+input {
+
+margin: 0 0 0.5em 0;
+border: 1px solid grey;
+padding:6px 10px;
+color: gray;
+font-size: 16px, 16px;
+
+}
 .textarea {
 
   border: 1px solid
   $grey;
   padding: 6px 10px;
   width:100%
-  color: $dark_grey;
+  color:grey;
 }
 
 .small {
@@ -267,12 +279,12 @@ margin: 0 0 0 0.5em,
     float:none;
   }
 
-  .input{
+  input{
 
     width: 100%
   }
 
-  .label {
+  label {
     width: 100%
     display:inline-block;
     float: left;
@@ -284,37 +296,47 @@ li,p {
   width: 100%;
   list-style: none;
 }
-  .input.btn{
+
+input.btn{
 margin: 1.5em 0 0.5em;}
 
 h1{
-font-size: pxtoem (36,16);
+font-size: 36px,16px;
 
 }
 
 h3 {
 
-  font-size: (18,16)
+  font-size: 18px,16px;
 }
 
-  li small {
+li small {
     display:none
   }
   }
 
-  input + span {
-    position: relative;
+input+ span {
+    position: absolute;
 
   }
 
-  input + span: : before {
+  input + span ::before {
     position: absolute;
     right:-20px;
-    top:5px;
+    top:5px;}
+
+  input:invalid {
+
     border:2px, color: purple;
   }
 
-input + span: : before {
+input:invalid + span::before {
   content: "x";
-  color: orange;
+  color: purple;
+}
+
+input:valid + span::before {
+content: "!!"
+color:blue;
+
 }
